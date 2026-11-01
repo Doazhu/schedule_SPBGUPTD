@@ -2,8 +2,6 @@
 
 Лендинг проекта Schedule для `preview.schedule.doazhu.pro`: зачем приложение, возможности, тур по экранам (слайдер), стена экранов, как устроено, планы, философия, оценка идеи, автор и контакты.
 
-Стек: Vite 5 + React 18 + TypeScript, анимации — компоненты React Bits (TechText, LightTunnel, StarBorder, AnimatedContent, DriftWall, PeekRating, ReflectiveCard) и GSAP.
-
 ## Готовая сборка
 
 Папка `dist/` (или архив `schedule-preview-dist.zip`) — это уже готовый статический сайт. Его можно положить на любой статический хостинг: nginx, Cloudflare Pages, GitHub Pages, Vercel, Netlify. Все пути относительные, поэтому сайт работает и в корне домена, и в подпапке.
@@ -15,8 +13,6 @@ npm ci
 npm run dev      # локально: http://localhost:5173
 npm run build    # результат — в dist/
 ```
-
-Нужен Node.js 18+.
 
 ## Деплой на свой сервер (nginx)
 
@@ -33,7 +29,3 @@ npm run build    # результат — в dist/
 - Картинки «Других работ» берутся с `doazhu.pro/static-projects/...`. Если картинка не загрузилась, вместо неё показывается заглушка с буквой.
 - `og:image` в `index.html` указывает на `https://preview.schedule.doazhu.pro/og.jpg`. Если домен будет другим, поменяй ссылку.
 - Шрифты Onest, Golos Text и JetBrains Mono подключаются с Google Fonts.
-
-## Лицензии
-
-Компоненты в `src/bits/` взяты из React Bits (лицензия MIT + Commons Clause, текст — `src/bits/LICENSE.md`). Использовать их в своём сайте можно. Нельзя продавать или распространять сами компоненты отдельно от сайта.
